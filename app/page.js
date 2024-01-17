@@ -1,8 +1,10 @@
-import PhotosList from '@/components/PhotosList'
-
+import PhotosList from "@/components/PhotosList";
 
 export default function Home() {
   return (
-  <PhotosList />  
-  )
+    <>
+      <PhotosList />
+      <PhotosList />
+    </>
+  );
 }
