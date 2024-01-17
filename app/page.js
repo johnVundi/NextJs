@@ -1,7 +1,8 @@
-import Image from 'next/image'
+import PhotosList from '@/components/PhotosList'
+
 
 export default function Home() {
   return (
-  <h1>Hello.</h1>  
+  <PhotosList />  
   )
 }
