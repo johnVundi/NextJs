@@ -15,3 +15,10 @@ export async function POST(request){
     return NextResponse.json({message:"Photo updated"}, {status: 201});
 
 }
+
+export async function DELETE(request){
+    const id = request.nextUrl.searchParams.get("id");
+    await connectMongoDB()
+    await Photo.findByIdAndDelete(id)
+    return NextResponse.json({message: "Photo deleted"}, {status: 200});
+}
