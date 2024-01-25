@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function AddPhoto() {
   const [photo, setPhoto] = useState("");
   const [description, setDescrption] = useState("");
-  const router = useRouter
+  const router = useRouter();
 
   const handleSubmit = async (e) =>{
     e.preventDefault();

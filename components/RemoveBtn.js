@@ -6,7 +6,7 @@ import { HiOutlineTrash } from "react-icons/hi"
 
 
 export default function RemoveBtn({id}){
-    const router = useRouter;
+    const router = useRouter();
     const removePhoto = async ()=>{
         const confirmed = confirm('are you sure?');
 

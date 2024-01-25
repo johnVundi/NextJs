@@ -4,9 +4,10 @@ import { useRouter } from "next/navigation";
 import { useState } from "react"
 
 
-export default function EditDesriptionForm({id, description}){
+export default function EditDesriptionForm({id, tittle, description}){
+  const [newTittle, setNewTittle] = useState(tittle)
   const [newDescription, setNewDescription] = useState(description);
-  const router = useRouter
+  const router = useRouter();
   const handleSubmit = async(e)=>{
     e.preventDefault();
 
@@ -29,7 +30,7 @@ export default function EditDesriptionForm({id, description}){
   }
 
     return(
-    <form className="flex flex-col gap-3"> 
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3"> 
       <input
         className="border border-slate-500 px-8 py-2"
         type="text"
